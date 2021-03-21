@@ -1,4 +1,4 @@
-const SCRIPTS = require("./Chapter 5 (High-order functions)/Direction/SCRIPTS");
+const SCRIPTS = require("./SCRIPTS");
 
 console.log(textDirection('உரை "сясь", الله يحب الصبر "ЧТо?"'));
 
