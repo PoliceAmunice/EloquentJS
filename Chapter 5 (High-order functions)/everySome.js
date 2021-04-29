@@ -9,28 +9,28 @@
  * Array.some( (value, index, arr) => ...)
  */
 
- let arr = [...Array(10).keys()];
- let isOdd;
- 
- let arrOdd = arr.filter(el => (el%2 == 0));
- 
- isOdd = every(arrOdd, el => (el%2 == 0));
- console.log(arrOdd, isOdd);
- 
- isOdd = everySome(arrOdd, el => (el%2 == 0));
- console.log(arrOdd, isOdd);
- 
- 
- 
- function every(arr, predicat) {
-	 for (let el of arr) {
-		 if (!predicat(el))
-			 return false
-	 }
-	 return true
- }
- 
- function everySome(arr, predicat) {
-	 let result = arr.some( el => predicat(el));
-	 return !result;
- }
+let arr = [...Array(10).keys()];
+let isOdd;
+
+let arrOdd = arr.filter(el => (el%2 == 0));
+
+isOdd = every(arrOdd, el => (el%2 == 0));
+console.log(arrOdd, isOdd);
+
+isOdd = everySome(arrOdd, el => (el%2 == 0));
+console.log(arrOdd, isOdd);
+
+
+
+function every(arr, predicat) {
+	for (let el of arr) {
+		if (!predicat(el))
+			return false
+	}
+	return true
+}
+
+function everySome(arr, predicat) {
+	let result = arr.some( el => predicat(el));
+	return !result;
+}

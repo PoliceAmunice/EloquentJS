@@ -1,5 +1,3 @@
-'use strict';
-
 /*
 	arr[].reduce(counter = arr[index], el = arr[index + 1], index)
 	Свёрстка, сворачивает исходный массив (/объект) в одно значение

@@ -7,7 +7,7 @@ loop(3, n => n > 0, n => n - 1, console.log);
 
 function loop(start, cond, update, action) {
 	for (let value = start; cond(value); value = update(value)){
-		action(value);
+		action(value); 
 	}
 }
 

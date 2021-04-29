@@ -1,6 +1,6 @@
 const SCRIPTS = require("./SCRIPTS");
 
-console.log(textDirection('உரை "сясь", الله يحب الصبر "ЧТо?"'));
+console.log(textDirection('உரை "сясь", الله يحب الصبر "ЧТо? "'));
 
 
 
