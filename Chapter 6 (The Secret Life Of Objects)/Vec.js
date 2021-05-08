@@ -4,11 +4,11 @@ class Vec {
 		this.y = y;
 	}
 	
-	plus(x2, y2) {
-		return `${this.x + x2} ${this.y + y2}`;
+	plus(vector) {
+		return new Vec(this.x + vector.x, this.y + vector.y)
 	}
-	minus(x2, y2) {
-		return `${this.x - x2} ${this.y - y2}`;
+	minus(vector) {
+		return new Vec(this.x - vector.x, this.y - vector.y)
 	}
 
 	get length() {
@@ -16,6 +16,6 @@ class Vec {
 	}
 }
 
-const vector = new Vec(5, 2);
-
-console.log(vector.length = 50);
+console.log(new Vec(1, 2).plus(new Vec(2, 3)));
+console.log(new Vec(1, 2).minus(new Vec(2, 3)));
+console.log(new Vec(3, 4).length);
