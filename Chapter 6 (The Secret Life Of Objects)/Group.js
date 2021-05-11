@@ -65,7 +65,7 @@ class GroupIterator {
 	 */
 	constructor(group) {
 		/** @private */
-		this._members = group._members;
+		this._members = Array.from(group._members);
 	}
 
 	/**
@@ -90,6 +90,12 @@ group.add(10);
 group.delete(10);
 console.log(group.has(10));
 
+// My test
 for (const iterator of group) {
 	console.log(iterator);
+}
+
+// Test from the author
+for (let value of Group.from(['a', 'b', 'c'])) {
+	console.log(value);
 }
