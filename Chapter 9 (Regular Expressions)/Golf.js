@@ -1,3 +1,11 @@
+/**
+ * Регулярно-выражательный гольф – игра, наподобие кодового гольфа.
+ * Смысл заключается в написании наиболее краткого выражения,
+ * решающего поставленную задачу. Получилось неплохо.
+ * 
+ * @func verify Ругается на некорректное выражение.
+ */
+
 verify(/ca[rt]/,
 	["my car", "bad cats"],
 	["camper", "high art"]);
@@ -26,12 +34,16 @@ verify(/\b[^\We]+\b/i,
 	["red platypus", "wobbling nest"],
 	["earth bed", "learning ape", "BEET"]);
 
-
+/**
+ * В случае успеха консоль молчит,
+ * иначе ругнётся на один из массивов.
+ * 
+ * @param {string} regexp Тестируемая регулярка.
+ * @param {array} yes Строки с соответствиями.
+ * @param {array} no Строки с несоответствиями.
+ */
 function verify(regexp, yes, no)
 {
-	// Ignore unfinished exercises
-	if (regexp.source == "...") return;
-
 	for (let str of yes) if (!regexp.test(str)) {
 		console.log(`Failure to match '${str}'`);
 	}
